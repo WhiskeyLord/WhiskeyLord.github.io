@@ -15,7 +15,7 @@ let rotHalo;
 
 
 function setup() {
-  createCanvas(displayWidth, displayHeight, WEBGL);
+  createCanvas(900, displayHeight, WEBGL);
   colorMode(HSB, 255);
   rotValue = 0;
   treeZ = 0;
