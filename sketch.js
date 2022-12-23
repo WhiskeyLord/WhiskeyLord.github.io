@@ -15,7 +15,7 @@ let rotHalo;
 
 
 function setup() {
-  createCanvas(1280, 720, WEBGL);
+  createCanvas(displayWidth, displayHeight, WEBGL);
   colorMode(HSB, 255);
   rotValue = 0;
   treeZ = 0;
@@ -59,10 +59,11 @@ function background_lights() {
       push();
       fill(150, 255, 250 - noise(i, frameCount / 14) * 200, 200); //изменение яркости каждые 14 фрамов
       
-        translate(i * 100, j * 55,0); //размешение по карте
+        translate(i * displayWidth/10, j * displayHeight/11,0); //размешение по карте
       
 
       quad(20, 10, 30, 0, 40, 10, 30, 20); //создание ромбов
+      
       pop();
     }
   }
@@ -228,7 +229,7 @@ function draw() {
   noStroke();
 
   push();
-  translate(-1000, -500, -300);
+  translate(-displayWidth, -displayHeight, -300);
   background_lights();
   pop();
 
