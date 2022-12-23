@@ -218,23 +218,42 @@ function draw() {
  // text("Current day: \n", -205, 50,10,100);
 
   //lights();
-  lightFalloff(1, 1, 0);
+  //lightFalloff(1, 1, 0);
   let dirX = (mouseX / width - 0.5) * 2;
   let dirY = (mouseY / height - 0.5) * 2; //свет следует за мышкой
-
+ // lights(10);
   colorMode(RGB);
-  ambientLight(100);
-  directionalLight(180, 180, 250, -dirX, -dirY, -2);
+  ambientLight(200,200,255);
+  directionalLight(150, 80, 250, -dirX, -dirY, -5);
   colorMode(HSB, 255);
   noStroke();
-
-  push();
+  
+    push();
   translate(-displayWidth, -displayHeight, -300);
   background_lights();
   pop();
-
+  //scale(0.5);
   rotateX(3); //1.5 - для просмотра елки сверху
-  translate(0+treeX,0+treeY,-100+treeZ);
+  push();
+  fill(20,0,200);
+  //rotateX(1.6);
+  translate(0,-220,-100);
+  rotateX(1.3);
+  ellipsoid(1000,300,10,10,10);
+  pop();
+
+//   push();
+//   translate(-500,-300,-200);
+//   ellipsoid(300,200,100);
+//   pop();
+  
+//   push();
+//   translate(500,-400,-200);
+//   ellipsoid(300,200,100);
+//   pop();
+
+ // rotateX(3); //1.5 - для просмотра елки сверху
+  translate(500+treeX,0+treeY,-100+treeZ);
   push();
   tree();
   pop();
