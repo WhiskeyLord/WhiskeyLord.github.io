@@ -266,7 +266,7 @@ function draw() {
   
    //scale(0.5);
   
-
+  //scale(0.8);
   rotateX(3); //1.5 - для просмотра елки сверху
   push();
 
@@ -282,7 +282,7 @@ function draw() {
   sign();
   pop();
  // rotateX(3); //1.5 - для просмотра елки сверху
-  translate(400+treeX,40+treeY,-300+treeZ);
+  translate(400+treeX,40+treeY,-150+treeZ);
   push();
   rotateY(0.5);
   rotateZ-(0.1);
