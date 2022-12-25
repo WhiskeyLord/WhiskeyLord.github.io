@@ -12,6 +12,11 @@ let clockSec;
 let roundPro;
 let treeSpin;
 let rotHalo;
+let gif;
+
+function preload() {
+  gif = loadImage('data/GIFTS.gif');
+}
 
 
 function setup() {
@@ -133,16 +138,17 @@ function keyPressed() {
   } 
 }
 function tree() {
-   if (treeSpin == true){
-     rotValue += 0.05;
-   } 
-   rotateY(rotValue);
+  rotateX(0.1);
+   // if (treeSpin == true){
+   //   rotValue += 0.05;
+   // } 
+   // rotateY(rotValue);
   push();
   fill(30, 220, 150, 255);
   // translate(width/4,height/2,0)
   cone(50, 450, 6, 24); //ствол
   translate(0, -50, 0);
-
+  
   fill(100, 255, 255, 255);
   cone(150, 200, 30, 10); //нижняя часть
   translate(0, 120, 0);
@@ -179,6 +185,32 @@ function tree() {
   pop();
 }
 
+function sign(){
+    push();
+  rotateX(-3);
+  translate(-570,-30,-60);
+  image(gif, 0, 0);
+  pop();
+  
+   push();
+  translate(-500,-260,120);
+  ellipsoid(100,100,100);
+  pop();
+  
+  push();
+  translate(-400,-280,120);
+  ellipsoid(100,100,100);
+  pop();
+    
+  push();
+  rotateX(0.1);
+  translate(-430,-140,120);
+  box(20,300,20);
+  translate(0,100,0);
+  box(300,150,50);
+  pop();
+}
+
 function draw() {
   // clockDay = day();
   // clockHour = hour();
@@ -207,17 +239,9 @@ function draw() {
   rotHalo+=0.04;
   move_tree();
   background(0);
+ 
 
-  // push();
-  //  rotateX(3);
-  // fill(255);
-  // translate(-220, 0, 0);
-  // clock();
-  // pop();
-  
- // text("Current day: \n", -205, 50,10,100);
-
-  //lights();
+//   lights();
   //lightFalloff(1, 1, 0);
   let dirX = (mouseX / width - 0.5) * 2;
   let dirY = (mouseY / height - 0.5) * 2; //свет следует за мышкой
@@ -232,29 +256,36 @@ function draw() {
   translate(-displayWidth, -displayHeight, -300);
   background_lights();
   pop();
-  //scale(0.5);
+  
+  
+    if (treeSpin == true){
+     rotValue += 0.02;
+   } 
+   rotateY(rotValue);
+  
+  
+   //scale(0.5);
+  
+
   rotateX(3); //1.5 - для просмотра елки сверху
   push();
+
   fill(20,0,200);
   //rotateX(1.6);
   translate(0,-220,-100);
-  rotateX(1.3);
-  ellipsoid(1000,300,10,10,10);
+  rotateX(1.7);
+  ellipsoid(800,500,10,10,10);
   pop();
-
-//   push();
-//   translate(-500,-300,-200);
-//   ellipsoid(300,200,100);
-//   pop();
   
-//   push();
-//   translate(500,-400,-200);
-//   ellipsoid(300,200,100);
-//   pop();
-
- // rotateX(3); //1.5 - для просмотра елки сверху
-  translate(500+treeX,0+treeY,-100+treeZ);
   push();
+  rotateY(-0.2);
+  sign();
+  pop();
+ // rotateX(3); //1.5 - для просмотра елки сверху
+  translate(400+treeX,40+treeY,-300+treeZ);
+  push();
+  rotateY(0.5);
+  rotateZ-(0.1);
   tree();
   pop();
   //rotateX(-3);
