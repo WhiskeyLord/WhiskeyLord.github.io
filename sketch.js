@@ -1,14 +1,10 @@
 let rotValue;
-let treeZ;
+let islandZ;
 let treeY;
 let treeX;
 let moveUpDown;
 let changeColor;
 let frame;
-let clockDay;
-let clockHour;
-let clockMinute;
-let clockSec;
 let roundPro;
 let treeSpin;
 let rotHalo;
@@ -23,7 +19,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   colorMode(HSB, 255);
   rotValue = 0;
-  treeZ = 0;
+  islandZ = 1;
   treeY = 0;
   treeX = 0;
   moveUpDown = 0;
@@ -33,29 +29,12 @@ function setup() {
   rotHalo = 0;
   // cursor('cursor/5f7a8c859d8e4003ab7935f6a12929b9huQjlfKGzvAgmU0i-1.png');
   // noCursor();
-   print("To control tree postion use WASD = (X and Y axis) and UP and DOWN ARROWS = (Z axis)");
-    print("To refresh tree postion press SPACE");                             print("To spin the tree press T");           
+    print("To control tree postion use WASD = (X and Y axis) ");
+   print("To refresh tree postion and island press SPACE");    
+  print("To scale the island use DOWN and UP ARROWS");    
+  print("To spin the island press T");           
 }
 
-// function clock() {
-//   //вывод времени до нового года  в виде текста на экран
-
-//   textSize(50);
-//   //textAlign(CENTER, CENTER);
-//   fill(255);
-
-//   text(
-//     "Countdown:" +
-//       (31 - clockDay) +
-//       " days " +
-//       (23 - clockHour) +
-//       " hours " +
-//       (59 - clockMinute) +
-//       " minutes",
-//     0,
-//     0
-//   );
-// }
 
 function background_lights() {
   //голубые мигалки на заднем фоне
@@ -78,7 +57,7 @@ function tree_lights(D, sphereD, sphereNum) {
   //огоньки на елке
 
   for (let i = 0; i < sphereNum; i++) {
-    // specularMaterial(map(i, 0, sphereNum, 255-changeColor, changeColor),255,255,230);
+   
     ambientMaterial(
       map(i, 0, sphereNum, 255 - changeColor, changeColor),
       255,
@@ -86,10 +65,9 @@ function tree_lights(D, sphereD, sphereNum) {
     );
     shininess(50);
     let xm, zm;
-    // if (changeColor<255){
-    fill(map(i, 0, sphereNum, 255 - changeColor, changeColor), 255, 255, 230); //}
-    // if (changeColor>255){
-    //   fill(map(i, 0, sphereNum, changeColor, 255-changeColor),255,255,255);}
+    
+    fill(map(i, 0, sphereNum, 255 - changeColor, changeColor), 255, 255, 230); //цвета меняются и мигают
+   
     xm = 0 + (D / 2) * cos(2 * PI * (i / sphereNum)); //формула для расположения на окружнсоти
     zm = 0 + (D / 2) * sin(2 * PI * (i / sphereNum));
     sphere(sphereD);
@@ -97,13 +75,13 @@ function tree_lights(D, sphereD, sphereNum) {
   }
 }
 
-function move_tree() {
-  // не используется на данный момент
+function move_tree() {  //движение елки и острова
+ 
   if (keyIsDown(UP_ARROW)) {
-    treeZ += 2;
+    islandZ += 0.02;
   }
   if (keyIsDown(DOWN_ARROW)) {
-    treeZ -= 2;
+    islandZ -= 0.02;
   }
   if (keyIsDown(87)) {
     treeY += 2;
@@ -120,7 +98,7 @@ function move_tree() {
   if (keyIsDown(32)) {
     treeX = 0;
     treeY = 0;
-    treeZ = 0;
+    islandZ = 1;
   }
 }
 
@@ -132,11 +110,13 @@ function presents() {
   fill(10, 255, 255, 255);
   box(50, 50, 50);
 }
-function keyPressed() {
+
+function keyPressed() {            //кружится остров (изначально кружилась только елка)
   if (keyCode === 84) {
     treeSpin = !treeSpin;
   } 
 }
+
 function tree() {
   rotateX(0.1);
    // if (treeSpin == true){
@@ -185,11 +165,11 @@ function tree() {
   pop();
 }
 
-function sign(){
+function sign(){              //знак с надписью GIFTS
     push();
   rotateX(-3);
   translate(-570,-30,-60);
-  image(gif, 0, 0);
+  image(gif, 0, 0);              //вставка гифки
   pop();
   
    push();
@@ -212,7 +192,7 @@ function sign(){
   
 }
 
-function snow_presents(){
+function snow_presents(){      //сугроб с подарками
   push();
   translate(-600,-240,-200);
   sphere(150);
@@ -235,14 +215,11 @@ function snow_presents(){
   
 }
 function draw() {
-  // clockDay = day();
-  // clockHour = hour();
-  // clockMinute = minute();
-  // clockSec = millis();
+
 
   frame++;
   if (frame < 100) {
-    moveUpDown += 0.1;
+    moveUpDown += 0.1;          //движение нимба на елке
   } else {
     moveUpDown -= 0.1;
   }
@@ -259,9 +236,9 @@ function draw() {
   }
 
   
-  rotHalo+=0.04;
+  rotHalo+=0.04;              //независимое кручение нимба
   move_tree();
-  background(0);
+  background(0);                
  
 
   // lights();
@@ -280,7 +257,7 @@ function draw() {
   background_lights();
   pop();
   
-  
+  scale(0+islandZ);
     if (treeSpin == true){
      rotValue += 0.02;
    } 
@@ -297,7 +274,7 @@ function draw() {
   //rotateX(1.6);
   translate(0,-220,-100);
   rotateX(1.7);
-  ellipsoid(800,700,10,10,10);
+  ellipsoid(800,700,10,10,10);              //остров
   pop();
   
   push();
@@ -312,15 +289,15 @@ function draw() {
   pop();
   scale(1.5);
  // rotateX(3); //1.5 - для просмотра елки сверху
-  //translate(400+treeX,40+treeY,-300+treeZ);
-  translate(300+treeX,80+treeY,-100+treeZ);
+  //translate(400+treeX,40+treeY,-300+islandZ);
+  translate(300+treeX,80+treeY,-100);
   push();
   rotateY(0.4);
   tree();
   pop();
   //rotateX(-3);
      push();
-  translate(-50, -200, 0);
+  translate(-50, -200, 0);                    //подарки под елкой
   presents();
   translate(120, 0, 0);
   scale(1.3);
