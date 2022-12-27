@@ -266,7 +266,7 @@ function draw() {
   
    //scale(0.5);
   translate(0,0,-windowWidth/10);
-  scale(windowWidth/(windowHeight*3)); // скале по отношению размера окна
+  scale(windowWidth/(windowHeight*2)); // скале по отношению размера окна
   rotateX(3); //1.5 - для просмотра елки сверху
   push();
 
