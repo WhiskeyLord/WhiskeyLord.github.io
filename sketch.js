@@ -209,8 +209,31 @@ function sign(){
   translate(0,100,0);
   box(300,150,50);
   pop();
+  
 }
 
+function snow_presents(){
+  push();
+  translate(-600,-240,-200);
+  sphere(150);
+  scale(1.4);
+  translate(20,80,70);
+  rotateX(0.5);
+  presents();
+  rotateX(-0.5);
+
+  translate(-70,10,-90);
+    rotateY(-0.9);
+  rotateX(0.5);
+  presents();
+  pop();
+    push();
+  scale(1.2);
+  translate(-420,-140,-200);
+  presents();
+  pop();
+  
+}
 function draw() {
   // clockDay = day();
   // clockHour = hour();
@@ -241,17 +264,17 @@ function draw() {
   background(0);
  
 
-//   lights();
+  // lights();
   //lightFalloff(1, 1, 0);
   let dirX = (mouseX / width - 0.5) * 2;
   let dirY = (mouseY / height - 0.5) * 2; //свет следует за мышкой
- // lights(10);
+
   colorMode(RGB);
   ambientLight(200,200,255);
   directionalLight(150, 80, 250, -dirX, -dirY, -5);
   colorMode(HSB, 255);
   noStroke();
-  
+    scale(windowWidth/2000); // скале по отношению размера окна
     push();
   translate(-displayWidth, -displayHeight, -300);
   background_lights();
@@ -266,8 +289,7 @@ function draw() {
   
    //scale(0.5);
   
- 
-  scale(windowWidth/(2.5*windowHeight)); // скале по отношению размера окна
+  scale(windowWidth/2000); // скале по отношению размера окна
   rotateX(3); //1.5 - для просмотра елки сверху
   push();
 
@@ -275,23 +297,29 @@ function draw() {
   //rotateX(1.6);
   translate(0,-220,-100);
   rotateX(1.7);
-  ellipsoid(800,500,10,10,10);
+  ellipsoid(800,700,10,10,10);
   pop();
   
   push();
   rotateY(-0.2);
   sign();
   pop();
- // rotateX(3); //1.5 - для просмотра елки сверху
-  translate(400+treeX,40+treeY,-150+treeZ);
+  
+
+  
   push();
-  rotateY(0.5);
-  rotateZ-(0.1);
+  snow_presents();
+  pop();
+  scale(1.5);
+ // rotateX(3); //1.5 - для просмотра елки сверху
+  //translate(400+treeX,40+treeY,-300+treeZ);
+  translate(300+treeX,80+treeY,-100+treeZ);
+  push();
+  rotateY(0.4);
   tree();
   pop();
   //rotateX(-3);
-
-  push();
+     push();
   translate(-50, -200, 0);
   presents();
   translate(120, 0, 0);
@@ -301,5 +329,6 @@ function draw() {
   scale(1.1);
   presents();
   pop();
+
 
 }
