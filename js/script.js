@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
     var ScrollFunc = function () {
         var y = window.scrollY;
         var x = window.innerWidth;
-       
+
         if (x > 1000) {
             if (y >= 300) {
                 up_btn.classList.remove("hide");
@@ -17,10 +17,10 @@ window.addEventListener("DOMContentLoaded", function () {
                 up_btn.classList.add("hide");
             }
         }
-        else{
+        else {
             up_btn.classList.add("hide");
         }
-      
+
     };
 
     window.addEventListener("scroll", ScrollFunc);
@@ -113,22 +113,24 @@ window.addEventListener("DOMContentLoaded", function () {
                 // showEl(tab_btn_Text[i]);
                 // tab_btn[i].classList.add("change-content-btn_anim");
                 if (target == tab_btn[i]) {
-                    tab_btn[i].addEventListener("mouseover", function (event) {
-                        let target = event.target;
+                    if (window.innerWidth > 1020) {
+                        tab_btn[i].addEventListener("mouseover", function (event) {
+                            let target = event.target;
 
 
 
-                        showEl(tab_btn_Text[i]);
+                            showEl(tab_btn_Text[i]);
 
 
-                    });
-                    tab_btn[i].addEventListener("mouseout", function (event) {
-                        let target = event.target;
+                        });
+                        tab_btn[i].addEventListener("mouseout", function (event) {
+                            let target = event.target;
 
 
-                        hideEl(tab_btn_Text[i]);
+                            hideEl(tab_btn_Text[i]);
 
-                    });
+                        });
+                    }
                     tab_btn[i].addEventListener("click", function () {
 
                         for (var j = 0; j < tab_content.length; j++) {
@@ -141,6 +143,7 @@ window.addEventListener("DOMContentLoaded", function () {
                     });
                     break;
                 }
+
 
             }
         }
