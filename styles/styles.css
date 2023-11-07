@@ -1,0 +1,384 @@
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SF-Pro-Display-Black.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+img{
+    width: 100%;
+    
+}
+body {
+    font-family: Montserrat;
+    color: #282a30;
+}
+
+.container-nav {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+.navbar-brand {
+    color: #282a30;
+    font-feature-settings:
+        "clig" off,
+        "liga" off;
+    font-family: SF Pro Display;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%;
+    letter-spacing: 1px;
+    width: 20%;
+}
+
+.h3 {
+    color: #282a30;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.h1 {
+    font-family: Montserrat;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 105px;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.h6 {
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.btn-primary {
+    width: 208px;
+    height: 75px;
+    background: #f7515c;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.btn:hover {
+    color: none;
+    border-color: #d73f49;
+    background-color: #d73f49;
+}
+.btn:active {
+    color: none;
+    border-color: #f45863 !important;
+    background-color: #f45863 !important;
+}
+#first-block {
+    margin-top: 108px;
+    background-image: url(../img/Group\ 23.png);
+    background-repeat: no-repeat;
+}
+#first-block .h1 {
+    color: #282a30;
+    font-size: 55px;
+    font-weight: 500;
+}
+#first-block .text-block {
+    width: 55%;
+    max-height: 700px;
+    align-self: center;
+    justify-content: space-between;
+    min-height: 420px;
+    margin-left: 60px;
+}
+#first-block .block-img {
+    width: 40%;
+}
+#first-block .h6 {
+    color: #f7515c;
+    font-size: 20px;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    width: 35px;
+    height: 264px;
+    background-color: #f7515c;
+}
+
+.text-secondary {
+    color: rgba(40, 42, 48, 0.3);
+}
+
+.slider-button-container {
+    position: relative;
+
+    top: -70px;
+    left: 90%;
+    width: 143px;
+}
+
+#slider-1 {
+    margin-top: 200px;
+}
+
+.carousel-control {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    border: 2px solid #282a30;
+    color: #282a30;
+}
+
+.carousel-control-next {
+    color: #282a30;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(/img/Vector\ 1.png);
+    width: 7px;
+    height: 13px;
+}
+
+.carousel-control-next-icon {
+    background-image: url(/img/Vector\ 2.png);
+    width: 7px;
+    height: 13px;
+}
+
+.card {
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -ms-border-radius: none;
+    -o-border-radius: none;
+    border: none;
+    height: 100%;
+}
+
+.card-img-top-box {
+    height: 312px;
+    width: 100%;
+    margin-bottom: 44px;
+}
+
+.card-img-top {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-main-text {
+    margin-bottom: 17px;
+}
+
+.carousel-item {
+    min-height: 427px;
+}
+
+.mb-44 {
+    margin-bottom: 44px;
+}
+
+#last-block {
+    margin-top: 150px;
+    width: 85%;
+}
+
+#last-block .block-img {
+    width: 60%;
+}
+
+.no-outline-h1 {
+    color: #282a30;
+    text-shadow: none;
+}
+.modal {
+    width: 80% !important;
+    height: 1000px;
+}
+.modal-dialog {
+    width: 100%;
+}
+.modal-content {
+    width: 100%;
+}
+form {
+    width: 100%;
+    height: 100%;
+}
+#footer {
+    padding-top: 100px;
+    margin-top: 148px;
+    margin-bottom: 50px;
+    border-top: #282a30 solid 2px;
+}
+
+.foot-link-head {
+    color: #282a30;
+
+    font-feature-settings:
+        "clig" off,
+        "liga" off;
+    font-family: SF Pro Display;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 31.2px */
+    letter-spacing: 1px;
+}
+.foot-link-sub {
+    color: rgba(40, 42, 48, 0.8);
+
+    font-feature-settings:
+        "clig" off,
+        "liga" off;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 21.6px */
+    letter-spacing: 1px;
+}
+
+#footer .container .container .foot-link-sub {
+    margin-top: 27px;
+}
+
+.bg-img {
+    background-image: url(/img/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 87px;
+}
+.text-blocks {
+    width: 450px;
+    height: 200px;
+    -webkit-box-shadow: 4px 4px 21px 4px rgba(34, 60, 80, 0.23);
+    -moz-box-shadow: 4px 4px 21px 4px rgba(34, 60, 80, 0.23);
+    box-shadow: 4px 4px 21px 4px rgba(34, 60, 80, 0.23);
+}
+#t1 {
+    top: 100px !important ;
+    right: 30% !important ;
+}
+#t2 {
+    top: -250px !important ;
+    right: -20% !important ;
+}
+#t3 {
+    top: 100px !important ;
+    right: -30% !important ;
+}
+#block-1 {
+    margin-top: 140px;
+}
+.text-block {
+    margin-left: 22px;
+    max-width: 70%;
+}
+.number {
+    margin-top: -70px;
+    border-radius: 50%;
+    color: #f7515c;
+    text-align: center;
+    padding-top: 11px;
+    background-color: rgba(247, 81, 92, 0.05);
+    width: 51px;
+    height: 51px;
+}
+
+
+@media  (max-width: 768px) {
+
+    
+}
+@media  (max-width: 992px){
+    .navbar-brand {
+        font-size: optional;
+    }
+    .h3 {
+        font-size: 28px !important;
+    }
+
+    .h1 {
+       
+        font-size: 55px;
+        
+       
+    }
+
+    .h6 {
+        font-size: 18px !important;
+    }
+    #first-block .h1 {
+        font-size: 38px !important;
+        font-weight:600;
+        line-height: 48px;
+    }
+    .btn-primary {
+        width: 150px;
+        height: 75px;
+        font-size: 18px;
+    }
+    #first-block {
+        margin-top: 50px;
+        background-image: none;
+       
+    }
+    #first-block .text-block {
+        min-height: 240px;
+    }
+    #first-block .block-img {
+        width: 40%;
+    }
+    .text-blocks {
+        width: 350px;
+        height: 140px;
+    }
+    .sub-text{
+        font-size: 14px;
+    }
+    .number {
+        margin-top: 0px;
+    }
+    .slider-button-container {
+        left: 80%;
+    }
+    #last-block .block-img {
+        width: 70%;
+    }
+    #footer{
+        display: none !important;
+    }
+}
+@media  (max-width: 1200px) {
+    #t1 {
+        top: 150px !important ;
+    }
+    #t2 {
+        right: -30% !important ;
+    }
+    .h6 {
+        font-size: 18px;
+    }
+}
