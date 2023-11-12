@@ -1,12 +1,11 @@
 @font-face {
     font-family: "SF Pro Display";
-    src: url("/fonts/SF-Pro-Display-Black.otf") format("truetype");
+    src: url("../fonts/SF-Pro-Display-Black.otf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
-img{
+img {
     width: 100%;
-    
 }
 body {
     font-family: Montserrat;
@@ -19,13 +18,12 @@ body {
 a {
     text-decoration: none;
 }
-#navbarToggleExternalContent{
-   
+#navbarToggleExternalContent {
     width: 30%;
     padding-top: 70px;
     color: #d73f49;
 }
-#navbarToggleExternalContent ul{
+#navbarToggleExternalContent ul {
     height: 60vh;
     width: 50%;
 }
@@ -132,7 +130,7 @@ a {
     height: 264px;
     background-color: #f7515c;
 }
-#navbarToggleExternalContent{
+#navbarToggleExternalContent {
     z-index: 1000;
     position: absolute;
 }
@@ -165,13 +163,13 @@ a {
 }
 
 .carousel-control-prev-icon {
-    background-image: url(/img/Vector\ 1.png);
+    background-image: url(../img/Vector\ 1.png);
     width: 7px;
     height: 13px;
 }
 
 .carousel-control-next-icon {
-    background-image: url(/img/Vector\ 2.png);
+    background-image: url(../img/Vector\ 2.png);
     width: 7px;
     height: 13px;
 }
@@ -224,19 +222,10 @@ a {
     text-shadow: none;
 }
 .modal {
-    width: 80% !important;
-    height: 1000px;
+    --bs-modal-width: 90%;
+   
 }
-.modal-dialog {
-    width: 100%;
-}
-.modal-content {
-    width: 100%;
-}
-form {
-    width: 100%;
-    height: 100%;
-}
+
 #footer {
     padding-top: 100px;
     margin-top: 148px;
@@ -276,7 +265,7 @@ form {
 }
 
 .bg-img {
-    background-image: url(/img/bg.png);
+    background-image: url(../img/bg.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -320,58 +309,142 @@ form {
     height: 51px;
 }
 
-@media  (max-width: 0px){
-
+@media (max-width: 576px) {
+    #first-block .block-img{
+        width: 100% !important;
+        height: 150px;
+    }
+    #first-block .block-img img, #block-dop .block-img img{
+        height: inherit;
+        object-fit:cover;
+    }
+    .text-block {
+        max-width: 100% !important;
+    }
+    #first-block .text-block {
+        width: 100%;
+        min-height: 180px !important;
+        margin: 20px;
+    }
+    .slider-button-container{
+        width: 100px;
+    }
+    .carousel-control{
+        width: 38px;
+        height: 38px;
+    }
+    .card-img-top-box {
+        height: 200px;
+    }
+    .carousel-item {
+         min-height: 0px; 
+    }
+    #last-block{
+        width: 100%;
+    }
+    #block-dop .block-img{
+        height: 150px;
+    }
+    .foot-link-head{
+        font-size: 12px !important;
+        margin-top: 4px;
+    }
+    .text-blocks {
+        width:100% !important;
+        
+    }
 }
-@media  (max-width: 767px) {
+@media (max-width: 767px) {
     .h3 {
-        font-size: 28px !important;
+        font-size: 22px !important;
     }
     .h1 {
-       
-        font-size: 28px !important;   
+        font-size: 42px !important;
+        line-height: 44px;
     }
     .h6 {
         font-size: 14px !important;
     }
     #first-block .h1 {
         font-size: 26px !important;
-        font-weight:500 !important;
-        line-height: 30px !important;
+        font-weight: 500 !important;
+        line-height: 42px !important;
+    }
+    .bg-img {
+        margin-top: 20px;
     }
     .btn-primary {
         width: 120px !important;
         height: 50px !important;
         font-size: 14px !important;
     }
+    .sub-text {
+        font-size: 12px !important;
+    }
+    .number {
+        padding-top: 14px;
+    }
+    #t3 {
+        top: 30px !important ;
+        right: -20% !important;
+    }
+    #t2 {
+        top: -150px !important;
+        right: -20% !important;
+    }
+
+    #t1 {
+        right: 20% !important;
+    }
+    #first-block,
+    #block-1 {
+        margin-top: 35px;
+    }
+
     #first-block .text-block {
         margin-left: 0;
     }
-    #first-block .h6{
+    #first-block .h6 {
         font-size: 14px !important;
     }
+    #slider-1,
+    #slider-dop,
+    #last-block {
+        margin-top: 60px;
+    }
+    .card-img-top{
+        object-fit:cover;
+    }
+    #footer{
+        padding-top: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .foot-link-head{
+        font-size: 18px;
+    }
+    .foot-link-sub{
+        font-size: 18px;
+    }
 }
-@media  (max-width: 992px){
+@media (max-width: 992px) {
     .navbar-brand {
         font-size: optional;
     }
     .h3 {
-        font-size: 28px !important;
+        font-size: 28px;
     }
 
     .h1 {
-       
-        font-size: 55px !important;
-        
-       
+        font-size: 55px;
     }
 
     .h6 {
-        font-size: 18px !important;
+        font-size: 18px;
     }
     #first-block .h1 {
-        font-size: 38px !important;
-        font-weight:600;
+        font-size: 38px ;
+        font-weight: 600;
         line-height: 48px;
     }
     .btn-primary {
@@ -382,7 +455,6 @@ form {
     #first-block {
         margin-top: 50px;
         background-image: none;
-       
     }
     #first-block .text-block {
         min-height: 240px;
@@ -394,7 +466,7 @@ form {
         width: 350px;
         height: 140px;
     }
-    .sub-text{
+    .sub-text {
         font-size: 14px;
     }
     .number {
@@ -406,16 +478,14 @@ form {
     #last-block .block-img {
         width: 70%;
     }
-    #footer{
-        display: none !important;
-    }
+
 }
-@media  (max-width: 1200px) {
+@media (max-width: 1200px) {
     #t1 {
         top: 150px !important ;
     }
     #t2 {
-        right: -30% !important ;
+        right: -30%;
     }
     .h6 {
         font-size: 18px;

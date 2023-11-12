@@ -16,7 +16,7 @@
         <div class="container-fluid container-nav d-flex justify-content-between ">
             <a class="navbar-brand" href="">Furniutr.</a>
             <div class="collapse navbar-collapse ">
-                <ul class="navbar-nav d-flex justify-content-between  w-100">
+                <ul class="navbar-nav d-flex justify-content-between  w-50">
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Home</a>
                     </li>
@@ -31,31 +31,34 @@
                     </li>
                 </ul>
             </div>
-            <button class="navbar-toggler z-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler z-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
+            </button>
         </div>
     </div>
-    <div class="collapse position-absolute z-2 end-0 top-0 pt-40 h-100" id="navbarToggleExternalContent" data-mdb-right="true">
+    <div class="collapse position-absolute z-2 end-0 top-0 pt-40 h-100" id="navbarToggleExternalContent"
+        data-mdb-right="true">
 
-                <ul class="bg-white navbar-nav d-flex flex-column align-items-center justify-content-evenly  w-100" >
-                    <li class="nav-item ">
-                        <a class="nav-link active h6" href="#">Home</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link  h6" href="#">About</a>
-                    </li>
-                    <li class="nav-item " >
-                        <a class="nav-link  h6" href="#">Collection</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  h6" href="#">Shop</a>
-                    </li>
-                </ul>
+        <ul class="bg-white navbar-nav d-flex flex-column align-items-center justify-content-evenly  w-100">
+            <li class="nav-item ">
+                <a class="nav-link active h6" href="#">Home</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link  h6" href="#">About</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link  h6" href="#">Collection</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  h6" href="#">Shop</a>
+            </li>
+        </ul>
     </div>
-    <div class="container-fluid d-flex justify-content-between  flex-row" id="first-block">
-        <div class="line d-md-inline d-sm-none d-xs-none"> </div>
-        <div class="container d-flex justify-content-around flex-column text-block">
+    <div class="container-fluid d-flex justify-content-between align-items-center flex-md-row flex-sm-row flex-lg-row flex-xl-row flex-column-reverse" id="first-block">
+        <div class="line d-none d-md-block "> </div>
+        <div class="container d-flex justify-content-around flex-column text-block ">
             <h6 class="h6">DECORATE HOME</h6>
             <h1 class="h1 no-outline-h1"> Feel your home
                 with a modern design
@@ -71,7 +74,7 @@
         </div>
     </div>
 
-    <div class="container-fluid  " id="block-1">
+    <div class="container-fluid  d-none d-sm-block" id="block-1">
         <div class="container-fluid">
             <h3 class="h3">More value from this</h3>
             <h1 class="h1">FURNITURE</h1>
@@ -116,8 +119,54 @@
         </div>
     </div>
 
-    <div class="container-fluid" id="slider-1">
-        <div class="container-fluid mb-44">
+    
+    <div class="container-fluid d-block d-sm-none " id="block-dop">
+        <div class="container-fluid">
+            <h3 class="h3">More value from this</h3>
+            <h1 class="h1">FURNITURE</h1>
+            <div class="container">
+                <div class="block-img">
+                    <img src="/img/bg.png" alt="no image">
+                </div> 
+                <div class="container d-flex flex-row align-items-center justify-content-center  text-blocks bg-white"
+                    id="t1">
+                    <div class="number">
+                        <h6 class="h6">1</h6>
+                    </div>
+                    <div class="text-block">
+                        <h6 class="h6">Full service</h6>
+                        <p class="sub-text">Provide best service and very fast response.</p>
+                    </div>
+                </div>
+                <div class="container d-flex flex-row align-items-center justify-content-center  text-blocks bg-white"
+                    id="t2">
+                    <div class="number">
+                        <h6 class="h6 ">2</h6>
+                    </div>
+                    <div class="text-block">
+                        <h6 class="h6">Long warranty</h6>
+                        <p class="sub-text">With a 5-year warranty provided, providing
+                            satisfying service.</p>
+                    </div>
+                </div>
+                <div class="container d-flex flex-row align-items-center justify-content-center text-blocks bg-white"
+                    id="t3">
+                    <div class="number">
+                        <h6 class="h6">3</h6>
+                    </div>
+                    <div class="text-block">
+                        <h6 class="h6">Modern design</h6>
+                        <p class="sub-text">The room looks beautiful with a blend of
+                            contemporary and attractive design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-none d-md-block d-lg-block" id="slider-1">
+        <div class="container mb-44">
             <h3 class="h3">Our you have to buy</h3>
             <h1 class="h1">Product</h1>
             <div class="slider-button-container">
@@ -238,6 +287,107 @@
         </div>
     </div>
 
+    <div class="container d-sm-block d-lg-none d-md-none " id="slider-dop">
+        <div class="container-fluid mb-44">
+            <h3 class="h3">Our you have to buy</h3>
+            <h1 class="h1">Product</h1>
+            <div class="slider-button-container">
+                <button class="carousel-control-prev carousel-control" type="button" data-bs-target="#carouselExample2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next carousel-control " type="button" data-bs-target="#carouselExample2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div id="carouselExample2" class="carousel slide">
+            <div class="carousel-inner">
+
+
+                <div class="card carousel-item active ">
+                    <div class="card-img-top-box">
+                        <img src="img/slider/1.png" class="card-img-top img-fluid mx-auto d-block" alt="no_img">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="h6 card-main-text text-center">Modern lamp study</h6>
+                        <h6 class="h6 text-secondary text-center">$258</h6>
+                    </div>
+                </div>
+                <div class="card carousel-item ">
+                    <div class="card-img-top-box">
+                        <img src="img/slider/2.png" class="card-img-top" alt="no_img">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="h6 card-main-text text-center">Modern lamp study</h6>
+                        <h6 class="h6 text-secondary text-center">$135</h6>
+                    </div>
+                </div>
+
+
+                <div class="card carousel-item ">
+                    <div class="card-img-top-box">
+                        <img src="img/slider/3.png" class="card-img-top" alt="no_img">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="h6 card-main-text text-center">Classic lamp</h6>
+                        <h6 class="h6 text-secondary text-center">$425</h6>
+                    </div>
+                </div>
+                <div class="card carousel-item ">
+                    <div class="card-img-top-box">
+                        <img src="img/slider/4.png" class="card-img-top" alt="no_img">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="h6 card-main-text text-center">Clock cute</h6>
+                        <h6 class="h6 text-secondary text-center">$331</h6>
+                    </div>
+                </div>
+                <div class="card carousel-item  ">
+                    <div class="card-img-top-box">
+                        <img src="img/slider/5.jpg" class="card-img-top img-fluid mx-auto d-block" alt="no_img">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="h6 card-main-text text-center">Modern stool</h6>
+                        <h6 class="h6 text-secondary text-center">$122</h6>
+                    </div>
+                </div>
+                <div class="card  carousel-item">
+                    <div class="card-img-top-box">
+                        <img src="img/slider/6.jpg" class="card-img-top" alt="no_img">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="h6 card-main-text text-center">Modern plant</h6>
+                        <h6 class="h6 text-secondary text-center">$144</h6>
+                    </div>
+                </div>
+                <div class="card carousel-item">
+                    <div class="card-img-top-box">
+                        <img src="img/slider/7.jpg" class="card-img-top" alt="no_img">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="h6 card-main-text text-center">Stool</h6>
+                        <h6 class="h6 text-secondary text-center">$231</h6>
+                    </div>
+                </div>
+                <div class="card carousel-item">
+                    <div class="card-img-top-box">
+                        <img src="img/slider/8.jpg" class="card-img-top" alt="no_img">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="h6 card-main-text text-center">Clock</h6>
+                        <h6 class="h6 text-secondary text-center">$543</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
     <div class="container-fluid d-flex justify-content-between flex-row" id="last-block">
         <div class="container d-flex justify-content-around container-lg flex-column">
             <div>
@@ -251,14 +401,14 @@
 
         </div>
         <div class="block-img">
-            <img src="/img/content2.png" alt="no_img">
+            <img src="img/content2.png" alt="no_img">
         </div>
     </div>
 
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal">
-        <div class="modal-dialog">
+        <div class="modal-dialog ">
             <div class="modal-content">
                 <form class="row g-3 needs-validation" novalidate>
                     <div class="col-md-4">
@@ -276,7 +426,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-5">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                             <label class="form-check-label" for="invalidCheck">
@@ -298,16 +448,16 @@
         </div>
     </div>
 
-    <div class="container-fluid d-flex justify-content-between container-lg flex-row" id="footer">
+    <div class="container-fluid d-flex justify-content-between container-lg flex-column flex-md-row" id="footer">
         <div class="container d-flex justify-content-around container-lg flex-column align-self-start text-start">
-            <a class="foot-link-head" href="#">Get your discount</a>
-            <div class="container d-flex justify-content-around container-lg flex-column p-0">
-                <a class="foot-link-sub" href="#">Check now!</a>
+            <a class="foot-link-head " href="#">Get your discount</a>
+            <div class="container d-md-flex justify-content-around container-lg flex-column p-0 d-none">
+                <a class="foot-link-sub " href="#">Check now!</a>
             </div>
         </div>
         <div class="container d-flex justify-content-around container-lg flex-column align-self-start text-start">
             <a class="foot-link-head" href="#">Our services</a>
-            <div class="container d-flex justify-content-around container-lg flex-column p-0">
+            <div class="container d-md-flex justify-content-around container-lg flex-column p-0 d-none">
                 <a class="foot-link-sub" href="#">Collection</a>
                 <a class="foot-link-sub" href="#">How it works</a>
                 <a class="foot-link-sub" href="#">Estimats</a>
@@ -315,15 +465,15 @@
         </div>
         <div class="container d-flex justify-content-around container-lg flex-column align-self-start text-start">
             <a class="foot-link-head" href="#">Company</a>
-            <div class="container d-flex justify-content-around container-lg flex-column p-0">
+            <div class="container d-md-flex justify-content-around container-lg flex-column p-0 d-none">
                 <a class="foot-link-sub" href="#">Terms of use</a>
                 <a class="foot-link-sub" href="#">Privacy policy</a>
                 <a class="foot-link-sub" href="#">Careers</a>
             </div>
         </div>
-        <div class="container d-flex justify-content-around container-lg flex-column align-self-start text-start">
+        <div class="container d-flex justify-content-around container-lg flex-column align-self-start text-start ">
             <a class="foot-link-head" href="#">Contact</a>
-            <div class="container d-flex justify-content-around container-lg flex-column p-0">
+            <div class="container d-md-flex justify-content-around container-lg flex-column p-0 d-none">
                 <a class="foot-link-sub" href="#">Furniutr2@furniture.com</a>
                 <a class="foot-link-sub" href="#">(888) 315-500</a>
                 <a class="foot-link-sub" href="#">St. VIllage, New York</a>
